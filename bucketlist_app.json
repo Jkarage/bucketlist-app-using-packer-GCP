@@ -1,0 +1,44 @@
+{
+	
+	"builders": [
+		{
+			"type": "googlecompute",
+			"project_id": "my-packer-project-287110",
+			"machine_type": "n1-standard-1",
+			"zone": "us-central1-a",
+			"ssh_username": "packer",
+			"image_description": "This is the AMI that holds my bucketlist application",
+			"source_image_family": "debian-10",
+                        "source_image": "debian-10-buster-v20200902",
+			"image_name": "debian-image-with-pre-installed-bucketlist-application",
+			"disk_size": 10,
+			"account_file": "/home/josephbkarage/my-packer-project-287110-e04dd2f38908.json"
+		}
+	],
+	"provisioners": [
+		{
+			"type": "shell",
+			"inline": [
+				"sudo apt update",
+                                "sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg2 -y",
+	      			"echo \"Updating  completed successfully.\"",
+                                "curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -",
+                                "sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable\"",
+                                "sudo apt update",
+                                "sudo apt install docker-ce -y",
+                                "echo \"DONE INSTALLING DOCKER ENGINE\""
+			]
+		},
+                {        "type": "shell",
+                         "inline":[
+                               
+                                 "sudo docker pull jkarage/bucketlistfrontend:2.0",
+                                 "sudo cp start.sh /usr/bin/start.sh",
+                                 "sudo chmod +x /usr/bin/start.sh",
+                                 "sudo cp startbucketlistapp.service /lib/systemd/system/startbucketlistapp.service",
+                                 "sudo systemctl enable startbucketlistapp.service"
+                          ]
+               }
+              ]
+}
+
