@@ -32,7 +32,7 @@
                 {        "type": "shell",
                          "inline":[
                                
-                                 "sudo git clone Jkarage/bucketlist-app-using-packer-GCP",
+                                 "sudo git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git",
                                  "cd bucketlist-app-using-packer-GCP",
                                  "sudo docker pull jkarage/bucketlistfrontend:2.0",
                                  "sudo cp start.sh /usr/bin/start.sh",
