@@ -37,7 +37,7 @@
                                  "cd bucketlist-app-using-packer-GCP",
                                  "sudo cp start.sh /usr/bin/start.sh",
                                  "sudo chmod +x /usr/bin/start.sh",
-                                 "sudo cp startbucketlistapp.service /lib/systemd/system/startbucketlistapp.service",
+                                 "sudo cp startbucketlistapp.service /etc/systemd/system/startbucketlistapp.service",
                                  "sudo systemctl enable startbucketlistapp.service"
                           ]
                }
