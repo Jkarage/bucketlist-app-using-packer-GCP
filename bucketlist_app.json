@@ -26,7 +26,8 @@
                                 "sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable\"",
                                 "sudo apt update",
                                 "sudo apt install docker-ce -y",
-                                "echo \"DONE INSTALLING DOCKER ENGINE\""
+                                "echo \"DONE INSTALLING DOCKER ENGINE\"",
+				"sudo docker pull jkarage/bucketlistfrontend:2.0"
 			]
 		},
                 {        "type": "shell",
@@ -34,9 +35,8 @@
                                
                                  "sudo git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git",
                                  "cd bucketlist-app-using-packer-GCP",
-                                 "sudo docker pull jkarage/bucketlistfrontend:2.0",
                                  "sudo cp start.sh /usr/bin/start.sh",
-                                 "sudo chmod +x /usr/bin/start.sh && sudo ./start.sh",
+                                 "sudo chmod +x /usr/bin/start.sh",
                                  "sudo cp startbucketlistapp.service /lib/systemd/system/startbucketlistapp.service",
                                  "sudo systemctl enable startbucketlistapp.service"
                           ]
