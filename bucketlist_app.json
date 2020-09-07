@@ -1,3 +1,4 @@
+  
 {
 	
 	"builders": [
@@ -16,17 +17,7 @@
 		}
 	],
 	"provisioners": [
-		{
-			"type": "shell",
-			"inline": [
-				"sudo apt-get install git -y",
-                                "git init",
-				"git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git",
-				"echo \"Cloning react source code completed successfully.\"",
-                                "cd /bucketlist-app-using-packer-GCP",
-                                "ls"
-			]
-		},
+	
 		{
 			"type": "shell",
 			"inline": [
@@ -39,6 +30,13 @@
                                 "sudo apt install docker-ce -y",
                                 "echo \"DONE INSTALLING DOCKER ENGINE\"",
 				"sudo docker pull jkarage/bucketlistfrontend:2.0"
+			]
+		},
+		{
+			"type": "shell",
+			"inline": [
+				"git clone https://github.com/davidmukiibi/bucketlist-go.git",
+				"echo \"Cloning react source code completed successfully.\""
 			]
 		},
 		
@@ -59,4 +57,3 @@
                }
               ]
 }
-
