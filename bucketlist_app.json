@@ -36,10 +36,15 @@
 				"git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git"
 			]
 		},
+                {
+			"type": "shell",
+			"inline": [
+				 "cd bucketlist-app-using-packer-GCP",
+			]
+		},
                 {        "type": "shell",
                          "inline":[
                                
-                                 "cd bucketlist-app-using-packer-GCP",
                                  "sudo cp start.sh /usr/bin/start.sh",
                                  "sudo chmod +x /usr/bin/start.sh",
                                  "sudo cp startbucketlistapp.service /etc/systemd/system/startbucketlistapp.service",
