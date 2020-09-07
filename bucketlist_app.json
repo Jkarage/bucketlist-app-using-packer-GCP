@@ -39,7 +39,7 @@
                 {
 			"type": "shell",
 			"inline": [
-				 "cd bucketlist-app-using-packer-GCP",
+				 "cd bucketlist-app-using-packer-GCP"
 			]
 		},
                 {        "type": "shell",
