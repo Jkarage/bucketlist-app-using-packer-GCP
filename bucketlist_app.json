@@ -35,7 +35,7 @@
 		{
 			"type": "shell",
 			"inline": [
-				"git clone https://github.com/davidmukiibi/bucketlist-go.git",
+				"git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git",
 				"echo \"Cloning react source code completed successfully.\""
 			]
 		},
@@ -43,14 +43,13 @@
                 {
 			"type": "shell",
 			"inline": [
-				 "cd bucketlist-go/cloud-deployment/GCP/packer && sudo chmod +x setup.sh && sudo ./setup.sh"
+				 "cd bucketlist-app-using-packer-GCP && sudo chmod +x start.sh "
 			]
 		},
                 {        "type": "shell",
                          "inline":[
                                
-                                 "sudo cp start.sh /usr/bin/start.sh",
-                                 "sudo chmod +x /usr/bin/start.sh",
+                                 "sudo cp start.sh /usr/bin/start.sh",                                
                                  "sudo cp startbucketlistapp.service /etc/systemd/system/startbucketlistapp.service",
                                  "sudo systemctl enable startbucketlistapp.service"
                           ]
