@@ -43,7 +43,7 @@
                 {
 			"type": "shell",
 			"inline": [
-				 "cd bucketlist-app-using-packer-GCP"
+				 "cd bucketlist-go/cloud-deployment/GCP/packer && sudo chmod +x setup.sh && sudo ./setup.sh"
 			]
 		},
                 {        "type": "shell",
