@@ -19,6 +19,13 @@
 		{
 			"type": "shell",
 			"inline": [
+				"git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git",
+				"echo \"Cloning react source code completed successfully.\""
+			]
+		},
+		{
+			"type": "shell",
+			"inline": [
 				"sudo apt update",
                                 "sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg2 -y",
 	      			"echo \"Updating  completed successfully.\"",
@@ -30,12 +37,7 @@
 				"sudo docker pull jkarage/bucketlistfrontend:2.0"
 			]
 		},
-		{
-			"type": "shell",
-			"inline": [
-				"git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git"
-			]
-		},
+		
                 {
 			"type": "shell",
 			"inline": [
