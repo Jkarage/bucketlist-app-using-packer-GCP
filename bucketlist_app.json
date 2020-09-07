@@ -49,8 +49,9 @@
                 {        "type": "shell",
                          "inline":[
                                
-                                 "sudo cp start.sh /usr/bin/start.sh",                                
-                                 "sudo cp startbucketlistapp.service /etc/systemd/system/startbucketlistapp.service",
+                                 "sudo cp /home/packer/bucketlist-app-using-packer-GCP/start.sh /usr/bin/start.sh", 
+				 "sudo chmod +x /usr/bin/start.sh",
+                                 "sudo cp /home/packer/bucketlist-app-using-packer-GCP/startbucketlistapp.service /etc/systemd/system/startbucketlistapp.service",
                                  "sudo systemctl enable startbucketlistapp.service"
                           ]
                }
