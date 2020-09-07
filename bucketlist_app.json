@@ -43,7 +43,7 @@
                 {
 			"type": "shell",
 			"inline": [
-				 "sudo cd bucketlist-app-using-packer-GCP && sudo chmod +x start.sh"
+				 "cd bucketlist-app-using-packer-GCP && ls"
 			]
 		},
                 {        "type": "shell",
