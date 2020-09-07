@@ -19,6 +19,7 @@
 		{
 			"type": "shell",
 			"inline": [
+				"apt-get install git -y",
 				"git clone https://github.com/Jkarage/bucketlist-app-using-packer-GCP.git",
 				"echo \"Cloning react source code completed successfully.\""
 			]
