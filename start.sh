@@ -1,8 +1,4 @@
 #!/bin/bash
-set -e
-set -o pipefail
-
-
 
 start_app() {
     echo "Starting The Bucketliost  Application..."
